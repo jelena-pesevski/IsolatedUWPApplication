@@ -1,0 +1,46 @@
+﻿<UserControl
+    x:Class="OposZadaci2._2020.JobProgressControl"
+    xmlns="http://schemas.microsoft.com/winfx/2006/xaml/presentation"
+    xmlns:x="http://schemas.microsoft.com/winfx/2006/xaml"
+    xmlns:local="using:OposZadaci2._2020"
+    xmlns:d="http://schemas.microsoft.com/expression/blend/2008"
+    xmlns:mc="http://schemas.openxmlformats.org/markup-compatibility/2006"
+    mc:Ignorable="d"
+    d:DesignHeight="80"
+    d:DesignWidth="450">
+
+    <Grid x:ConnectionId='2' Background="Transparent"                               >
+        <FlyoutBase.AttachedFlyout>
+            <MenuFlyout>
+                <MenuFlyoutItem x:ConnectionId='3' Text="Remove job"                              />
+            </MenuFlyout>
+        </FlyoutBase.AttachedFlyout>
+        <Grid.RowDefinitions>
+            <RowDefinition Height="Auto"/>
+            <RowDefinition Height="Auto"/>
+            <RowDefinition Height="Auto"/>
+        </Grid.RowDefinitions>
+        <Grid.ColumnDefinitions>
+            <ColumnDefinition Width="*"/>
+            <ColumnDefinition Width="Auto"/>
+            <ColumnDefinition Width="Auto"/>
+            <ColumnDefinition Width="Auto"/>
+            <ColumnDefinition Width="Auto"/>
+        </Grid.ColumnDefinitions>
+        <TextBlock x:ConnectionId='4' x:Name="JobTitleTextBlock" Text="Filename" Margin="5"/>
+        <ProgressBar x:ConnectionId='5' x:Name="JobProgressBar" Value="0.0" Maximum="100.0" Grid.Row="1" Margin="10,5,10,5" Height="4"/>
+        <Button x:ConnectionId='6' x:Name="CancelButton" Visibility="Collapsed" Grid.Row="0" Grid.RowSpan="3" Grid.Column="1" Width="40" Height="40" Margin="5"                            VerticalAlignment="Top">
+            <SymbolIcon Symbol="Cancel"/>
+        </Button>
+        <Button x:ConnectionId='7' x:Name="PauseButton" Visibility="Collapsed" Grid.Row="0" Grid.RowSpan="3" Grid.Column="2" Width="40" Height="40" Margin="5"                           VerticalAlignment="Top">
+            <SymbolIcon Symbol="Pause"/>
+        </Button>
+
+
+        <Button x:ConnectionId='8' x:Name="ResumeButton" Visibility="Collapsed" Grid.Row="0" Grid.RowSpan="3" Grid.Column="3" Width="40" Height="40" Margin="5"                            VerticalAlignment="Top">
+            <SymbolIcon Symbol="Play"/>
+        </Button>
+        <TextBox x:ConnectionId='9' x:Name="NumberOfThreads"  Grid.Row="0" Grid.Column="4" Margin="5" Grid.RowSpan="3" PlaceholderText=""                                          />
+    </Grid>
+</UserControl>
+

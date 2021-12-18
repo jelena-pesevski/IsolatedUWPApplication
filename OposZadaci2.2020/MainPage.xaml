@@ -1,0 +1,32 @@
+﻿<Page
+    x:Class="OposZadaci2._2020.MainPage"
+    xmlns="http://schemas.microsoft.com/winfx/2006/xaml/presentation"
+    xmlns:x="http://schemas.microsoft.com/winfx/2006/xaml"
+    xmlns:local="using:OposZadaci2._2020"
+    xmlns:d="http://schemas.microsoft.com/expression/blend/2008"
+    xmlns:mc="http://schemas.openxmlformats.org/markup-compatibility/2006"
+    mc:Ignorable="d"
+    Background="{ThemeResource ApplicationPageBackgroundThemeBrush}" Height="540" Width="960">
+    <Grid>
+        <Grid.RowDefinitions>
+            <RowDefinition Height="*"/>
+            <RowDefinition Height="3*"/>
+        </Grid.RowDefinitions>
+        <TextBlock Text="Simple Image Processor" Style="{ThemeResource TitleTextBlockStyle}" HorizontalAlignment="Center" Margin="15"/>
+        <TextBox x:Name="ParallelJobsTextBox" PlaceholderText="Max number of parallel jobs" FontFamily="Consolas" AcceptsReturn="True" Margin="118,79,742,8" Grid.Row="0" TextChanged="ParallelJobsTextBox_TextChanged" />
+        <Button x:Name="Submit" Content="Submit" Height="33" Margin="243,86,0,0" Grid.Row="0" VerticalAlignment="Top" Width="72" Click="Submit_Click"/>
+        <Button x:Name="RunJobs" Content="Run Jobs" Height="40" Margin="634,83,0,0" Grid.Row="0" VerticalAlignment="Top" Width="191" Click="RunJobs_Click"/>
+
+        <Button Content="Choose Files" HorizontalAlignment="Center" Height="40" Margin="0,83,0,0" Grid.Row="0" VerticalAlignment="Top" Width="191" Click="Button_Click"/>
+        <ScrollViewer VerticalScrollBarVisibility="Auto" VerticalScrollMode="Enabled" Grid.Row="1" >
+            <StackPanel x:Name="JobsStackPanel" Padding="10">
+
+            </StackPanel>
+        </ScrollViewer>
+        <Button x:Name="SaveFiles" Height="37" Margin="847,86,0,0" VerticalAlignment="Top" Width="46" Click="SaveFiles_Click">
+            <SymbolIcon Symbol="Save"/>
+        </Button>
+
+    </Grid>
+
+</Page>
